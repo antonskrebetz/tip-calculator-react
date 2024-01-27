@@ -1,0 +1,114 @@
+.container {
+  padding-right: 30px;
+  display: grid;
+  border-radius: var(--border-radius-m);
+}
+
+.inputGroup:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.label {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: var(--dark-gray-cyan);
+}
+
+.numberInputWrapper {
+  position: relative;
+}
+
+.numberInput {
+  width: 100%;
+  padding: 3px 10px;
+  font: inherit;
+  font-size: 24px;
+  text-align: right;
+  color: var(--dark-cyan);
+  background-color: var(--light-gray-cyan);
+  border: none;
+  border-radius: var(--border-radius-s);
+}
+
+.numberInput.numberError {
+  box-shadow: 0 0 0 2px var(--error);
+
+  &:focus {
+    box-shadow: 0 0 0 2px var(--error);
+  }
+}
+
+.numberInput:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--strong-cyan);
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.labelWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tipsWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.tip {
+  position: relative;
+  display: grid;
+}
+
+.tipInput {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+}
+
+.tipButton {
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  text-align: center;
+  border-radius: var(--border-radius-s);
+  padding: 10px;
+}
+
+.customTipWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.tipCustom::placeholder {
+  color: var(--dark-gray-cyan);
+}
+
+.tipInput:hover + .tipButton {
+  background-color: var(--strong-cyan);
+  color: var(--dark-cyan);
+}
+
+.tipInput:checked + .tipButton {
+  background-color: var(--strong-cyan);
+}
+
+.error {
+  font-size: 16px;
+  color: var(--error);
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    padding-right: 0px;
+    padding-bottom: 30px;
+  }
+}

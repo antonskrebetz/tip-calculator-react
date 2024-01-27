@@ -1,0 +1,63 @@
+.container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--dark-cyan);
+  border-radius: 10px;
+}
+
+.dataView {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+  
+.dataViewRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+}
+
+.header {
+  font-size: 16px;
+  color: var(--white);
+}
+
+.subHeader {
+  font-size: 12px;
+  color: var(--gray-cyan);
+}
+
+.result {
+  font-size: 30px;
+  color: var(--strong-cyan);
+}
+
+.resetButton {
+  padding: 10px;
+  font: inherit;
+  font-size: 16px;
+  color: var(--dark-cyan);
+  text-transform: uppercase;
+  background-color: var(--strong-cyan);
+  border-radius: var(--border-radius-s);
+  border: none;
+  cursor: pointer;
+}
+
+.resetButton[disabled] {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+  
+.resetButton:not([disabled]):hover {
+  background-color: var(--light-gray-cyan);
+}
